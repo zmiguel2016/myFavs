@@ -28,6 +28,10 @@ app.use('/', indexRouter);
 const artistRouter = require('./routes/artists')
 app.use('/artists', artistRouter)
 
+//songs
+const songRouter = require('./routes/songs')
+app.use('/songs', songRouter)
+
 
 
 //connect to database
