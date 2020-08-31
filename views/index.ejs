@@ -1,7 +1,10 @@
 <h2>Recently Added</h2>
 
 <div>
+    
     <% songs.forEach(song => { %>
+        <a href="/songs/<%= song.id %> ">
        <img height="100" width="100" src="<%= song.albumCoverPath  %> ">
+    </a>
     <% }) %>  
 </div>

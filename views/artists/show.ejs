@@ -3,9 +3,9 @@
 <%- include('../partials/deleteForm', {url: `/artists/${artist.id}`})  %> 
 <% if(songsbyArtist.length > 0){ %>
 <h2>Books By Artist</h2>
-<div>
     <% songsbyArtist.forEach(song => { %>
+        <a href="/songs/<%= song.id %> ">
        <img height="100" width="100" src="<%= song.albumCoverPath  %> ">
+    </a>
     <% }) %>  
-    </div>
 <% } %> 

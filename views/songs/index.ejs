@@ -11,6 +11,8 @@
 <br>
 <div>
 <% songs.forEach(song => { %>
+   <a href="/songs/<%= song.id %> ">
    <img height="100" width="100" src="<%= song.albumCoverPath  %> ">
+   </a>
 <% }) %>  
 </div>
