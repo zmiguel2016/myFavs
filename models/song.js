@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const path = require('path')
-const albumCoverBasePath ='uploads/albumCovers'
+
+
 const songSchema =  new mongoose.Schema({
     title: {
         type: String,
@@ -20,6 +20,10 @@ const songSchema =  new mongoose.Schema({
         default: Date.now
     },
     albumCover: {
+        type: Buffer,
+        required: true
+    },
+    albumCoverType: {
         type: String,
         required: true
     },
@@ -31,9 +35,8 @@ const songSchema =  new mongoose.Schema({
 });
 
 songSchema.virtual('albumCoverPath').get(function() {
-    if (this.albumCover != null){
-        return path.join('/', albumCoverBasePath, this.albumCover)
+    if (this.albumCover != null && this.albumCoverType != null){
+        return `data:${this.albumCoverType};charset=utf-8;base64,${this.albumCover.toString('base64')}`
     }
 })
 module.exports = mongoose.model('Song', songSchema);
-module.exports.albumCoverBasePath = albumCoverBasePath;
