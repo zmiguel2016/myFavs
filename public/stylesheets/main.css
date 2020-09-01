@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
+
+:root{
+    font-family: 'Lexend Peta', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,  rgb(129, 44, 77),  rgb(30, 86, 112));
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.inner-container{
+    margin: 0 2rem;
+
+}
+
+.header-title{
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.header-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header-nav li {
+    list-style: none;
+}
+.header-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.header-nav li a:hover, .header-title:hover{
+    color: rgb(6, 199, 206);
+}
+
+.page-header{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.btn {
+    border: 1px solid rgb(129, 44, 77);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Lexend Peta', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.btn-danger{
+    color: black;
+    background-color: rgb(255, 128, 128);
+}
+
+.btn-row{
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row > * {
+    margin-left: 1rem;
+}
+
+.btn-row > * :first-child {
+    margin-left: 0;
+}
+
+.form-row{
+    display: flex;
+    margin-bottom: .5rem;
+}
+.form-item{
+    display:flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.form-item:first-child{
+    margin-left: 0;
+}
+
+.form-item-no-grow{
+    flex-grow: 0;
+}
+
+.form-item >label{
+    font-size: 1.2;
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+
+.form-item input, .form-item select{
+    height: 2rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid rgb(0, 0, 0);
+    background-color:whitesmoke;
+    color: black;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Lexend Peta', sans-serif;
+}
+
+.form-row-end{
+    justify-content: flex-end;
+}
+
+.filepond--root{
+    font-family: 'Lexend Peta', sans-serif;
+    margin-bottom: 0;
+}
+
+.filepond--drop-label{
+    font-size: inherit;
+}

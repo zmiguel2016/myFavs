@@ -1,29 +1,36 @@
-<div>
-<label>Title</label>
-<input type="text" name="title" value="<%= song.title %>" >
+<div class="form-row">
+<div class="form-item">
+    <label>Title</label>
+    <input type="text" name="title" value="<%= song.title %>" >
 </div>
-<div>
-<label>Artist</label>
-<select name="artist">
-<%  artists.forEach(artist => { %>
-    <% if(artist.id === song.artist) { %>
-        <option selected label="<%= artist.name %> " value="<%= artist.id %> "></option> 
-        <% } else{ %> 
-        <option label="<%= artist.name %>" value="<%= artist.id%>"></option> 
-        <% } %> 
-        <% }) %> 
-</select>
+<div class="form-item">
+        <label>Artist</label>
+    <select name="artist">
+    <%  artists.forEach(artist => { %>
+        <% if(artist.id === song.artist) { %>
+            <option selected label="<%= artist.name %> " value="<%= artist.id %> "></option> 
+            <% } else{ %> 
+            <option label="<%= artist.name %>" value="<%= artist.id%>"></option> 
+            <% } %> 
+            <% }) %> 
+    </select>
 </div>
-<div>
-<label>Album Title</label>
-<input type="text" name="albumTitle" value="<%= song.albumTitle %>" >
 </div>
-<div>
-<label>Genre</label>
-<input type="text" name="genre" value="<%= song.genre %>" >
+
+<div class="form-row">
+<div class="form-item">
+    <label>Album Title</label>
+    <input type="text" name="albumTitle" value="<%= song.albumTitle %>" >
 </div>
-<div>
+<div class="form-item">
+    <label>Genre</label>
+    <input type="text" name="genre" value="<%= song.genre %>" >
+</div>
+</div>
+<div class="form-row">
+<div class="form-item form-item-no-grow">
     <label> Album Cover</label>
     <input type="file" name="cover" class="filepond">
+</div>
 </div>
 

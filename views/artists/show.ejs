@@ -1,8 +1,10 @@
-<h2><%= artist.name %> </h2>
-<a href="/artists/<%= artist.id  %>/edit ">Edit</a>
-<%- include('../partials/deleteForm', {url: `/artists/${artist.id}`})  %> 
+<h2 class="page-header"><%= artist.name %> </h2>
+<div class="btn-row">
+    <a class="btn btn-primary" href="/artists/<%= artist.id  %>/edit ">Edit</a>
+    <%- include('../partials/deleteForm', {url: `/artists/${artist.id}`})  %> 
+</div>
 <% if(songsbyArtist.length > 0){ %>
-<h2>Books By Artist</h2>
+<h2 class="page-header">Books By Artist</h2>
     <% songsbyArtist.forEach(song => { %>
         <a href="/songs/<%= song.id %> ">
        <img height="100" width="100" src="<%= song.albumCoverPath  %> ">
