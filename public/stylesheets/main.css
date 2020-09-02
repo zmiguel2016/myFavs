@@ -147,3 +147,73 @@ body{
 .filepond--drop-label{
     font-size: inherit;
 }
+
+.artist-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.artist-name{
+    font-size: 1.5 rem;
+}
+
+.song-cover {
+    width: 200px;
+    height: 200px;
+}
+
+.song-cover-large {
+    width: 400px;
+    height: 400px;
+}
+
+.song-grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, 200px) ;
+}
+
+.song-grid-large{
+    grid-template-columns: repeat(auto-fill, 400px) ;
+}
+
+.error-message{
+    color: rgb(255, 128, 128);
+}
+
+
+.song-details{
+    display: flex;
+}
+.song-details-label{
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.song-details-grid{
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+}
+
+.song-details-btn-grid{
+    display: grid;
+    justify-items: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas: 
+        "edit delete"
+        "artist artist";
+    grid-gap: .5rem;
+    margin-top: .5rem;
+}
+
+.song-details-artist-button{
+    grid-area: artist;
+    justify-self: stretch;
+}

@@ -4,10 +4,6 @@
     <%- include('../partials/deleteForm', {url: `/artists/${artist.id}`})  %> 
 </div>
 <% if(songsbyArtist.length > 0){ %>
-<h2 class="page-header">Books By Artist</h2>
-    <% songsbyArtist.forEach(song => { %>
-        <a href="/songs/<%= song.id %> ">
-       <img height="100" width="100" src="<%= song.albumCoverPath  %> ">
-    </a>
-    <% }) %>  
+<h2 class="page-header">Songs By Artist</h2>
+    <%- include('../partials/songGrid', { songs: songsbyArtist, large: true }) %> 
 <% } %> 
