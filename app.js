@@ -7,12 +7,17 @@ const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
-
+var cors = require('cors');
+var cookieParser = require('cookie-parser');
 
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
+app.use(express.static(__dirname + '/views/auth'))
+   .use(cors())
+   .use(cookieParser());
+
 app.use(expressLayouts)
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
@@ -33,7 +38,13 @@ app.use('/artists', artistRouter)
 const songRouter = require('./routes/songs')
 app.use('/songs', songRouter)
 
+//spotfy auth
+const authRouter = require('./routes/auth')
+app.use('/auth', authRouter)
 
+//spotfy ssearch
+const spotifysearchRouter = require('./routes/spotifysearch')
+app.use('/spotifysearch', spotifysearchRouter)
 
 //connect to database
 mongoose.connect(process.env.DB_CONNECTION,

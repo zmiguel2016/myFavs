@@ -31,6 +31,9 @@ router.get('/new', async (req, res) => {
     renderNewPage(res, new Song)
 })
 
+
+
+
 //create songs route
 router.post('/', async (req,res) => {
     const song = new Song({

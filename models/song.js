@@ -35,7 +35,9 @@ const songSchema =  new mongoose.Schema({
 });
 
 songSchema.virtual('albumCoverPath').get(function() {
-    if (this.albumCover != null && this.albumCoverType != null){
+    if(this.albumCoverType == "link"){
+        return this.albumCover.toString('utf8')
+    }else if (this.albumCover != null && this.albumCoverType != null){
         return `data:${this.albumCoverType};charset=utf-8;base64,${this.albumCover.toString('base64')}`
     }
 })
