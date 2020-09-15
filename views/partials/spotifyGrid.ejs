@@ -1,18 +1,20 @@
 <% songs.forEach(song => { %>
     <form action="/spotifysearch" method="POST">
-    <div>
+    <div class="songsearch">
         <img class ="song-cover" src="<%= song.albumCover %> ">
+        <div >
+        <br>
         Song: <%= song.name %> 
         <br>
         Artist: <%= song.artist %> 
-
+    </div>
         <input type="hidden" name="name" value="<%= song.name %>" >
         <input type="hidden" name="artist" value="<%= song.artist %>" >
         <input type="hidden" name="album" value="<%= song.album %>" >
         <input type="hidden" name="albumCover" value="<%= song.albumCover %>" >
         <input type="hidden" name="link" value="<%= song.link %>" >
        
-    <div>
+    <div class="search-button">
         <button class="btn btn-primary" type= "submit">Add</button>
     </div>
 </form>

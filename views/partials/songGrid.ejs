@@ -1,9 +1,13 @@
-<% songCoverClass = locals.large ? 'song-cover-large' : '' %> 
-<% songGridClass = locals.large ? 'song-grid-large' : '' %> 
+<% songCoverClass = locals.large ? 'song-cover-large' : '' %> <% songGridClass =
+locals.large ? 'song-grid-large' : '' %>
 <div class="song-grid <%= songGridClass %>">
-<% songs.forEach(song => { %>
-    <a href="/songs/<%= song.id %> ">
-    <img class="song-cover <%= songCoverClass %>"  src="<%= song.albumCoverPath  %> ">
-    </a>
- <% }) %>  
+  <% songs.forEach(song => { %>
+  <a href="/songs/<%= song.id %> ">
+    <img
+      class="song-cover <%= songCoverClass %>"
+      src="<%= song.albumCoverPath  %> "
+    />
+  </a>
+  <h3><%= song.title %></h1>
+  <% }) %>
 </div>

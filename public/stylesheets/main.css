@@ -1,222 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap");
 
-:root{
-    font-family: 'Lexend Peta', sans-serif;
-    font-size: 20px;
-    color: white;
+:root {
+  font-family: "Lexend Peta", sans-serif;
+  font-size: 20px;
+  color: white;
 }
 
-*, *::before, *::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(to right,  rgb(129, 44, 77),  rgb(30, 86, 112));
+body {
+  background: linear-gradient(to right, rgb(129, 44, 77), rgb(30, 86, 112));
 }
 
-.container{
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 3rem;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
 }
 
-.inner-container{
-    margin: 0 2rem;
-
+.inner-container {
+  margin: 0 2rem;
 }
 
-.header-title{
-    color: white;
-    text-decoration: none;
-    font-size: 2.5rem;
-    font-weight: bold;
+.header-title {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .header-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 
 .header-nav ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 .header-nav li {
-    list-style: none;
+  list-style: none;
 }
 .header-nav li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 300;
-    padding: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  padding: 1rem;
 }
 
-.header-nav li a:hover, .header-title:hover{
-    color: rgb(6, 199, 206);
+.header-nav li a:hover,
+.header-title:hover {
+  color: rgb(6, 199, 206);
 }
 
-.page-header{
-    font-size: 2rem;
-    font-weight: 500;
+.page-header {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .btn {
-    border: 1px solid rgb(129, 44, 77);
-    border-radius: .5rem;
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    font-family: 'Lexend Peta', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
+  border: 1px solid rgb(129, 44, 77);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: "Lexend Peta", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
-.btn-primary{
-    color: rgb(0, 0, 0);
-    background-color: white;
+.btn-primary {
+  color: rgb(0, 0, 0);
+  background-color: white;
 }
 
-.btn-danger{
-    color: black;
-    background-color: rgb(255, 128, 128);
+.btn-danger {
+  color: black;
+  background-color: rgb(255, 128, 128);
 }
 
-.btn-row{
-    display: flex;
-    align-items: flex-start;
+.btn-row {
+  display: flex;
+  align-items: flex-start;
 }
 
 .btn-row > * {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .btn-row > * :first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
 
-.form-row{
-    display: flex;
-    margin-bottom: .5rem;
+.form-row {
+  display: flex;
+  margin-bottom: 0.5rem;
 }
-.form-item{
-    display:flex;
-    flex-direction: column;
-    margin-left: 2rem;
-    flex-grow: 1;
-    flex-basis: 0;
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
 }
-.form-item:first-child{
-    margin-left: 0;
-}
-
-.form-item-no-grow{
-    flex-grow: 0;
+.form-item:first-child {
+  margin-left: 0;
 }
 
-.form-item >label{
-    font-size: 1.2;
-    margin-bottom: .25rem;
-    margin-left: .25rem;
+.form-item-no-grow {
+  flex-grow: 0;
 }
 
-.form-item input, .form-item select{
-    height: 2rem;
-    padding: .25rem .5rem;
-    border-radius: .25rem;
-    border: 1px solid rgb(0, 0, 0);
-    background-color:whitesmoke;
-    color: black;
-    font-size: 1rem;
-    font-weight: normal;
-    font-family: 'Lexend Peta', sans-serif;
+.form-item > label {
+  font-size: 1.2;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
 }
 
-.form-row-end{
-    justify-content: flex-end;
+.form-item input,
+.form-item select {
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: whitesmoke;
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: "Lexend Peta", sans-serif;
 }
 
-.filepond--root{
-    font-family: 'Lexend Peta', sans-serif;
-    margin-bottom: 0;
+.form-row-end {
+  justify-content: flex-end;
 }
 
-.filepond--drop-label{
-    font-size: inherit;
+.filepond--root {
+  font-family: "Lexend Peta", sans-serif;
+  margin-bottom: 0;
 }
 
-.artist-row{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+.filepond--drop-label {
+  font-size: inherit;
 }
 
-.artist-name{
-    font-size: 1.5 rem;
+.artist-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.artist-name {
+  font-size: 1.5 rem;
 }
 
 .song-cover {
-    width: 200px;
-    height: 200px;
+  width: 175px;
+  height: 175px;
 }
 
 .song-cover-large {
-    width: 400px;
-    height: 400px;
+  width: 350px;
+  height: 350px;
 }
 
 .song-grid {
-    display: grid;
-    justify-content: center;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 200px) ;
+  display: grid;
+  justify-content: center;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 
-.song-grid-large{
-    grid-template-columns: repeat(auto-fill, 400px) ;
+.song-grid-large {
+  grid-template-columns: repeat(auto-fill, 400px);
 }
 
-.error-message{
-    color: rgb(255, 128, 128);
+.error-message {
+  color: rgb(255, 128, 128);
 }
 
-
-.song-details{
-    display: flex;
+.song-details {
+  display: flex;
 }
-.song-details-label{
-    font-size: 1.2rem;
-    font-weight: 500;
-    align-self: flex-start;
-}
-
-.song-details-grid{
-    display: grid;
-    align-content: flex-start;
-    align-items: center;
-    grid-gap: 1rem;
-    grid-template-columns: auto auto;
+.song-details-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: flex-start;
 }
 
-.song-details-btn-grid{
-    display: grid;
-    justify-items: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    grid-template-areas: 
-        "edit delete"
-        "artist artist";
-    grid-gap: .5rem;
-    margin-top: .5rem;
+.song-details-grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
 }
 
-.song-details-artist-button{
-    grid-area: artist;
-    justify-self: stretch;
+.song-details-btn-grid {
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  grid-template-areas:
+    "edit delete"
+    "artist artist";
+  grid-gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-
-  
+.song-details-artist-button {
+  grid-area: artist;
+  justify-self: stretch;
+}
+.songsearch {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  align-content: flex-start;
+  margin: 1rem;
+}
+.search-button {
+  margin-left: 3rem;
+}
+.song-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.song-form .btn {
+  height: 3rem;
+  font-size: 10pt;
+}

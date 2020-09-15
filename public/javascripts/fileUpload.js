@@ -1,13 +1,15 @@
-FilePond.registerPlugin(
-    FilePondPluginImagePreview,
-    FilePondPluginImageResize,
-    FilePondPluginFileEncode,
-  )
+//file pond uplaods images to database
 
-  FilePond.setOptions({
-      stylePanelAspectRatio: 200 / 200,
-      imageResizeTargetWidth: 100,
-      imageResizeTargetHeight: 100
-  })
-  
+FilePond.registerPlugin(
+  FilePondPluginImagePreview,
+  FilePondPluginImageResize,
+  FilePondPluginFileEncode
+);
+
+FilePond.setOptions({
+  stylePanelAspectRatio: 200 / 200,
+  imageResizeTargetWidth: 100,
+  imageResizeTargetHeight: 100,
+});
+
 FilePond.parse(document.body);
