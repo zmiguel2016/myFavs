@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv/config");
+}
+
 var express = require("express"); // Express web server framework
 const router = express.Router();
 var request = require("request"); // "Request" library
@@ -6,10 +10,10 @@ var Auth = require("../models/auth");
 var querystring = require("querystring");
 var cookieParser = require("cookie-parser");
 
-var client_id = "17b9781b1cd046e79d0ff7331fe8dfe8"; // Your client id
-var client_secret = "299fe22cdf2f419ba6be046e123b0088"; // Your secret
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
 //var redirect_uri = 'http://localhost:3000/auth/callback/'; // development uri
-var redirect_uri = "https://myfavs-explore.herokuapp.com/auth/callback/"; // Your redirect uri
+var redirect_uri = process.env.REDIRECT_URI; // Your redirect uri
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
