@@ -25,7 +25,7 @@ Install dependencies:
 You can run app on browser:
 https://myfavs-explore.herokuapp.com/
 
-Or you can run on local node serve:
+Or you can run on local node server:
 `npm run devStart`
 
 # Author
