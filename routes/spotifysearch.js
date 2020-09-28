@@ -83,6 +83,7 @@ router.post("/", async (req, res) => {
     genre: " ",
     albumCover: req.body.albumCover,
     albumCoverType: "link",
+    link: req.body.link,
   });
   await saveArtist(song, req.body.artist);
   try {

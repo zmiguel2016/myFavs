@@ -37,6 +37,7 @@ router.post("/", async (req, res) => {
     albumTitle: req.body.albumTitle,
     genre: req.body.genre,
     artist: req.body.artist,
+    link: req.body.link,
   });
 
   saveCover(song, req.body.cover);
@@ -77,6 +78,7 @@ router.put("/:id", async (req, res) => {
     song.albumTitle = req.body.albumTitle;
     song.genre = req.body.genre;
     song.artist = req.body.artist;
+    song.link = req.body.link;
     if (req.body.cover != null && req.body.cover != "") {
       saveCover(song, req.body.cover);
     }

@@ -1,36 +1,41 @@
 <div class="form-row">
-<div class="form-item">
+  <div class="form-item">
     <label>Title</label>
-    <input type="text" name="title" value="<%= song.title %>" >
-</div>
-<div class="form-item">
-        <label>Artist</label>
+    <input type="text" name="title" value="<%= song.title %>" />
+  </div>
+  <div class="form-item">
+    <label>Artist</label>
     <select name="artist">
-    <%  artists.forEach(artist => { %>
-        <% if(artist.id === song.artist) { %>
-            <option selected label="<%= artist.name %> " value="<%= artist.id %> "></option> 
-            <% } else{ %> 
-            <option label="<%= artist.name %>" value="<%= artist.id%>"></option> 
-            <% } %> 
-            <% }) %> 
+      <% artists.forEach(artist => { %> <% if(artist.id == song.artist) { %>
+      <option
+        selected
+        label="<%= artist.name %>"
+        value="<%= artist.id %> "
+      ></option>
+      <% } else{ %>
+      <option label="<%= artist.name %> " value="<%= artist.id%>"></option>
+      <% } %> <% }) %>
     </select>
-</div>
+  </div>
 </div>
 
 <div class="form-row">
-<div class="form-item">
+  <div class="form-item">
     <label>Album Title</label>
-    <input type="text" name="albumTitle" value="<%= song.albumTitle %>" >
-</div>
-<div class="form-item">
+    <input type="text" name="albumTitle" value="<%= song.albumTitle %>" />
+  </div>
+  <div class="form-item">
     <label>Genre</label>
-    <input type="text" name="genre" value="<%= song.genre %>" >
-</div>
+    <input type="text" name="genre" value="<%= song.genre %>" />
+  </div>
 </div>
 <div class="form-row">
-<div class="form-item form-item-no-grow">
+  <div class="form-item">
+    <label>link</label>
+    <input type="text" name="link" value="<%= song.link %>" />
+  </div>
+  <div class="form-item form-item-no-grow">
     <label> Album Cover</label>
-    <input type="file" name="cover" class=" song-cover filepond">
+    <input type="file" name="cover" class="song-cover filepond" />
+  </div>
 </div>
-</div>
-

@@ -1,20 +1,28 @@
-<h2 class="page-header"><%= song.title %> </h2>
+<h2 class="page-header"><%= song.title %></h2>
 <div class="song-details">
-    <div>
-        <img class = "song-cover" src="<%= song.albumCoverPath  %> ">
-        <div class="song-details-btn-grid">
-        <a class="btn btn-primary" href="/songs/<%= song.id %>/edit ">Edit</a>
-        <%- include('../partials/deleteForm', { url: `/songs/${song.id}` })  %> 
+  <div>
+    <img class="song-cover" src="<%= song.albumCoverPath  %> " />
+    <div class="song-details-btn-grid">
+      <a class="btn btn-primary" href="/songs/<%= song.id %>/edit ">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/songs/${song.id}` }) %>
 
-        <a class="btn btn-primary song-details-artist-button" href="/artists/<%= song.artist.id %> ">View Artist</a>
+      <a
+        class="btn btn-primary song-details-artist-button"
+        href="/artists/<%= song.artist.id %> "
+        >View Artist</a
+      >
     </div>
-</div>
-<div class="song-details-grid">
+  </div>
+  <div class="song-details-grid">
     <div class="song-details-label">Artist:</div>
     <div><%= song.artist.name %></div>
     <div class="song-details-label">Album:</div>
     <div><%= song.albumTitle %></div>
     <div class="song-details-label">Genre:</div>
     <div><%= song.genre %></div>
-</div>
+    <div class="song-details-label">Link:</div>
+    <a class="btn btn-primary" href="<%= song.link %>" target="_blank">
+      <div>Play</div>
+    </a>
+  </div>
 </div>
